@@ -1,0 +1,22 @@
+#pragma warning(disable: 4996)
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+int squere(int w, int h)
+{
+	int result = (w * h) - ((h / 3)*4);
+	return printf("%d",result);
+}
+
+int main()
+{
+	int value, value2;
+	scanf("%d %d", &value, &value2);
+	squere(value,value2);
+	
+
+	return 0;
+}
+
