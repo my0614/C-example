@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include<String.h>
+
+
+int main()
+{
+	char string[100];
+	gets(string);
+	int string_len = strlen(string);
+	int i,cnt=0;
+
+	for (i = 0; i < string_len; i++)
+	{
+		if (string[i] == '(')
+			cnt++;
+		else if(string[i] == ')')
+			cnt--;
+		if (cnt < 0)
+		{
+			break;
+		}
+	}
+
+	if (cnt == 0)
+		printf("True");
+	else
+		printf("False");
+
+
+	return 0;
+}
