@@ -1,0 +1,43 @@
+#pragma warning(disable:4996)
+#include <stdio.h>
+#include <string.h>
+main()
+{
+
+	const int money = 1130; // 기호상수
+
+	int a;
+	scanf("%d", &a);
+	printf("%d", a * money);
+	return 0;
+
+	/*
+	int value;
+	scanf("%d",&value);
+	int i, j=0;
+	if (value == 1)
+	{
+		printf("a^%d+b^%d", value, value);
+		return 0;
+	}
+
+	printf("a^%d", value);
+	for (i = value-1; i >= 1; i--)
+	{
+			printf("+%d*a^%d*b^%d",value,i,++j);
+			if (j >= value-1)
+			{
+				printf("+b^%d", value);
+				return 0;
+			}
+
+
+
+	}
+	return 0;
+ */
+	
+
+}
+	
+		
