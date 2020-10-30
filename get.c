@@ -2,26 +2,33 @@
 #include <string.h>
 int main()
 {
+	char check;
 	char file_name[30];
+	char file_name2[30]={0,};
 	char message[50];
 	gets(message);
-	int len = strlen(message);
-	printf("len = %d\n",len);
-	FILE *fp;
 	if(message[0] == 'g' && message[1] == 'e' && message[2] == 't')
 	{
+	
+		int len = strlen(message);
+		printf("len = %d\n",len);
+		FILE *fp;
+
 		int index = 4;
-		printf("file_name : ");
+		
 		for(int i=index; i<len;i++)
 		{
-			//strcat(file_name,message[i]);
-			printf("%c",message[i]);
+			sprintf(file_name,"%c",message[i]);
+			strcat(file_name2,file_name);
+		
+		
 		}
 		printf("\n");
-		fp = fopen("hello.txt","rb");
+		printf("file_name%s\n\n",file_name2);
+		fp = fopen(file_name2,"rb");
 		if(fp == NULL)
 		{
-			printf("file");
+			printf("not file!");
 			return 1;
 		}
 		printf("file : ");
@@ -33,4 +40,5 @@ int main()
 		fclose(fp);
 		return 0;
 	}
+	
 }
