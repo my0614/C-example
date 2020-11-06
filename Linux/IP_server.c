@@ -93,7 +93,7 @@ int sendMsg(char *msg, int size, char *ip, int port)
 {
 	struct sockaddr_in mySock = {AF_INET, MY_PORT_S, INADDR_ANY};
 	int sockfd = socket(AF_INET, SOCK_DGRAM, 0);
-	int ret = bind(sockfd, (struct ockaddr *)&mySock, sizeof(mySock));
+	int ret = bind(sockfd, (struct sockaddr *)&mySock, sizeof(mySock));
 	if(ret < 0)
 	{
 		extern int errno;
@@ -106,3 +106,5 @@ int sendMsg(char *msg, int size, char *ip, int port)
 
 
 }
+
+ 
